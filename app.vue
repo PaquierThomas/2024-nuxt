@@ -1,5 +1,14 @@
+<script setup>
+onMounted(() => {
+  const cart = localStorage.getItem("cart");
+  storeToRefs.setCart(JSON.parse(cart));
+});
+</script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    <!-- <Header /> -->
+    <RouterView />
+    <Footer />
   </div>
 </template>
