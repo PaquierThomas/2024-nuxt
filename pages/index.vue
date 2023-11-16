@@ -103,6 +103,8 @@ const hasMoreProducts = computed(() => {
       :buttons="home.data.hero_buttons"
     />
     <section class="container">
+      <!-- <MySliderSection /> -->
+
       <Information :information="home.data.information" />
       <MyTitleSection title="Product" subtitle="Most Popular Items" />
       <div class="p-index__recipes">
@@ -160,6 +162,7 @@ const hasMoreProducts = computed(() => {
       <MyTitleSection title="Testimonials" subtitle="Our Happy Client Says" />
       <MyNewsletterSection />
     </section>
+    <MySliderSection />
   </div>
 </template>
 
