@@ -29,10 +29,11 @@ const isOdd = (index) => {
     ></span>
   </section> -->
 
-  <section class="c-services">
-    <div class="c-services__list">
+  <section class="c__services">
+    <div class="c__services__list">
       <div v-for="item in services" :class="['c-services__item']">
         <MyCard
+          class="c__services__card"
           :name="item.services_icon"
           :title="item.services_card_title"
           :description="item.services_card_description"
@@ -43,13 +44,20 @@ const isOdd = (index) => {
 </template>
 
 <style lang="scss">
-.c-services__list {
-  display: grid;
-  justify-items: center;
-  align-items: stretch;
-  grid-template-rows: 1fr;
+.c__services {
+  margin: 20px 0;
+  &__list {
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    grid-template-rows: 1fr;
 
-  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
-  gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+  }
+  &__card:hover {
+    border: none;
+    box-shadow: 0px 0px rem(100) 0px rgba($gray, 40%);
+  }
 }
 </style>

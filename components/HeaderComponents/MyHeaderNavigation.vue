@@ -49,7 +49,7 @@ const liens = [
       text-decoration: none;
       color: $black;
       &:hover {
-        color: green;
+        color: $primary-color;
       }
     }
   }
@@ -59,7 +59,7 @@ const liens = [
   text-decoration: none;
   color: $black;
   &:hover {
-    color: green;
+    color: $primary-color;
   }
 }
 </style>

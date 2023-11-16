@@ -1,8 +1,8 @@
 <script setup>
-onMounted(() => {
-  const cart = localStorage.getItem("cart");
-  storeToRefs.setCart(JSON.parse(cart));
-});
+// onMounted(() => {
+//   const cart = localStorage.getItem("cart");
+//   storeToRefs.setCart(JSON.parse(cart));
+// });
 </script>
 
 <template>

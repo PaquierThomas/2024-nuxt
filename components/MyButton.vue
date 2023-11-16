@@ -36,7 +36,7 @@ const className = computed(() => ({
 <style lang="scss" scoped>
 .button {
   background-color: $primary-color;
-  background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
+  // background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
   border: none;
   border-radius: rem(15);
   box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
