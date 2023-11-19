@@ -103,9 +103,11 @@ const hasMoreProducts = computed(() => {
       :buttons="home.data.hero_buttons"
     />
     <section class="container">
-      <!-- <MySliderSection /> -->
       <Information :information="home.data.information" />
-      <MyTitleSection title="Product" subtitle="Most Popular Items" />
+      <MyTitleSection
+        :title="home.data.product_title"
+        :subtitle="home.data.product_subtitle"
+      />
       <div class="p-index__recipes">
         <!-- Carte appellée dynamiquement depuis l'api mais ne fonctionne pas si l'api n'est pas lancée -->
         <!-- <div class="p-index__recipe" v-for="recipe in recipes">
@@ -149,18 +151,26 @@ const hasMoreProducts = computed(() => {
         </MyButton>
       </div>
       <MyTitleSection
-        title="Services"
-        subtitle="Why Choose Our Favorite Food"
+        :title="home.data.services_title"
+        :subtitle="home.data.services_subtitle"
       />
-      <!-- {{ home.data.services }} -->
-      <Services v-bind:services="home.data.services" />
+
+      <Services :services="home.data.services" />
+
       <MyTitleSection
-        title="How to work"
-        subtitle="Food Us An Important Part Of A Balanced Diet"
+        :title="home.data.how_to_section_title"
+        :subtitle="home.data.how_to_section_subtitle"
       />
-      <MyTitleSection title="Testimonials" subtitle="Our Happy Client Says" />
+
+      <HowTo :how_to="home.data.how_to" />
+      <MyTitleSection
+        :title="home.data.testimonial_title"
+        :subtitle="home.data.testimonial_subtitle"
+      />
     </section>
-    <MySliderSection />
+    <MySliderSection />*
+    <!-- {{ home.data.newsletter }} -->
+    <PrismicRichText :field="home.data.newsletter_title" />
     <MyNewsletterSection />
   </div>
 </template>
@@ -177,7 +187,7 @@ const hasMoreProducts = computed(() => {
 
 .container {
   // max-width: 1600px; // en grand écran
-  max-width: 1220px; // en moyen écran
+  max-width: 1350px; // en moyen écran
   // max-width: 960px; // en petit écran
   margin: 40px auto;
 }

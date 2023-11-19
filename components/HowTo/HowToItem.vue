@@ -9,13 +9,13 @@ const props = defineProps({
   reversed: Boolean,
 });
 
-useSeoMeta({
-  title: home.value.data.meta_title,
-  ogTitle: home.value.data.meta_title,
-  description: home.value.data.meta_description,
-  ogDescription: home.value.data.meta_description,
-  ogImage: home.value.data.meta_image,
-});
+// useSeoMeta({
+//   title: home.value.data.meta_title,
+//   ogTitle: home.value.data.meta_title,
+//   description: home.value.data.meta_description,
+//   ogDescription: home.value.data.meta_description,
+//   ogImage: home.value.data.meta_image,
+// });
 </script>
 
 <template>
@@ -24,8 +24,9 @@ useSeoMeta({
       <PrismicRichText class="c-how-to-item__title" :field="title" />
       <PrismicRichText class="c-how-to-item__text" :field="text" />
     </div>
+    <!-- <PrismicImage :image="image" class="c-how-to-item__image" /> -->
     <!-- {{ image }} -->
-    <img :src="image.url" :alt="image.alt" class="c-how-to-item__image" />
+    <!-- <img :src="image.url" :alt="image.alt" class="c-how-to-item__image" /> -->
   </div>
 </template>
 

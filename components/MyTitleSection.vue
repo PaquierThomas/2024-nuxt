@@ -1,3 +1,7 @@
+---
+import { PrismicRichText } from '#build/components';
+---
+
 <script setup>
 defineProps({
   title: String,
@@ -7,8 +11,9 @@ defineProps({
 
 <template>
   <div class="c__title">
-    <h2>{{ title }}</h2>
-    <h3>{{ subtitle }}</h3>
+    <!-- {{ home.data }} -->
+    <PrismicRichText class="c__title_h3" :field="subtitle" />
+    <PrismicRichText class="c__title_h2" :field="title" />
   </div>
 </template>
 
@@ -16,18 +21,18 @@ defineProps({
 .c__title {
   display: flex;
   flex-direction: column;
-  margin: rem(50) 0;
+  margin: rem(130) 0 rem(50) 0;
 
   font-family: $primary-font-family;
   text-align: center;
   line-height: 1.5;
 
-  h2 {
+  &_h3 {
     font-size: rem(15);
     font-weight: 400;
     color: $primary-color;
   }
-  h3 {
+  &_h2 {
     font-size: 2.25rem;
     font-weight: 700;
   }
