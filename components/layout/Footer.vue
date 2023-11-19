@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: rem(150);
+  // margin-top: rem(150);
   // padding: ;
   font-family: $primary-font-family;
   background-color: #fafaff;

@@ -25,15 +25,19 @@
 
 <style lang="scss" scoped>
 .c__sectionEmail {
+  // max-width: 1600px; // en grand écran
+  max-width: rem(1220); // en moyen écran
+  // max-width: 960px; // en petit écran
+  margin: rem(150) auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  gap: 50px;
+  gap: rem(50);
   // position: relative;
-  padding: 70px 50px;
+  padding: rem(70) rem(50);
   width: 100%;
-  height: 180px;
+  height: rem(180);
   border-radius: 50px;
   font-family: $primary-font-family;
   background-color: rgb(0, 0, 0);
@@ -49,7 +53,7 @@
   &__content {
     flex: none;
     color: white;
-    max-width: 532px;
+    max-width: rem(532);
 
     h3 {
       font-size: rem(36);
@@ -116,7 +120,7 @@
     }
 
     > * {
-      margin: 15px 0;
+      margin: rem(15) 0;
     }
   }
 }

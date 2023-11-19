@@ -138,8 +138,8 @@ const getIcon = computed(() => {
     width: rem(50);
   }
   &.-medium {
-    height: rem(88);
-    width: rem(88);
+    height: rem(70);
+    width: rem(70);
   }
   &.-large {
     height: rem(98);

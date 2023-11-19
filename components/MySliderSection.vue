@@ -3,6 +3,12 @@
 <template>
   <section class="c_slidersection">
     <div class="c_slidersection__slider">
+      <div class="fleche c_slidersection__slider__fleche_gauche">
+        <MyIconFood name="LeftArrow" color="white" background="orange" />
+      </div>
+      <div class="fleche c_slidersection__slider__fleche_droite">
+        <MyIconFood name="RightArrow" color="white" background="orange" />
+      </div>
       <div class="c_slidersection__slider__info">
         <img src="/WilliansJhone.jpg" alt="photo d'un pdg" />
 
@@ -33,7 +39,6 @@
   align-items: center;
   justify-content: center;
   gap: rem(70);
-  //   margin: 15px 120px;
 
   font-family: $primary-font-family;
   color: $black;
@@ -42,6 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     gap: rem(50);
     max-width: rem(703);
@@ -49,6 +55,19 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: rem(100) rem(20);
     border-radius: rem(35);
+
+    .fleche {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &__fleche_droite {
+      right: rem(-25);
+    }
+    &__fleche_gauche {
+      left: rem(-25);
+    }
 
     &__info {
       display: flex;

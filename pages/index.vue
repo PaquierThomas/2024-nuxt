@@ -104,7 +104,6 @@ const hasMoreProducts = computed(() => {
     />
     <section class="container">
       <!-- <MySliderSection /> -->
-
       <Information :information="home.data.information" />
       <MyTitleSection title="Product" subtitle="Most Popular Items" />
       <div class="p-index__recipes">
@@ -160,9 +159,9 @@ const hasMoreProducts = computed(() => {
         subtitle="Food Us An Important Part Of A Balanced Diet"
       />
       <MyTitleSection title="Testimonials" subtitle="Our Happy Client Says" />
-      <MyNewsletterSection />
     </section>
     <MySliderSection />
+    <MyNewsletterSection />
   </div>
 </template>
 
